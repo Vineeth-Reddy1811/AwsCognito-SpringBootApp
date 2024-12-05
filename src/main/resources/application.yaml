@@ -1,0 +1,22 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: q6017u916qs5tvvgg3070ct5p
+            client-secret: 9tumut732fmascq0dt9ehdc401c31ckmndvd7lbogip4qj7th90
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            clientName: VineethTestApp
+            authorization-grant-type: authorization_code
+        provider:
+          cognito:
+            issuerUri: https://cognito-idp.us-east-2.amazonaws.com/us-east-2_jyS8Roz5o
+
+aws:
+  cognito:
+    logoutUrl: https://mydomain.auth.us-east-1.amazoncognito.com/logout
+    logout:
+      success:
+        redirectUrl: https://mydomain/logout
